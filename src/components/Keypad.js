@@ -3,12 +3,26 @@ import React, { Component } from 'react';
 
 export default class Keypad extends Component {
 
+    onKeyUp = () => console.log("Entering password...")
+
     render() {
         return (
-        <input type="password" onKeyUp={(e) => {
-            console.log("Entering password...")
-        }} />
+        <input type="password" onKeyUp={this.onKeyUp} />
         )
     }
+
+    ////Flatiron's solution
+//   handleInputPassword = () => console.log('Entering password...')
+
+//   render() {
+//     return (
+//       <div>
+//         <input 
+//           type="password"
+//           onKeyUp={this.handleInputPassword} 
+//         />
+//       </div>
+//     )
+//   }
 
 }
